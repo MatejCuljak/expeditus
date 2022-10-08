@@ -1,8 +1,149 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Lato';
+    text-align: justify;
+    color: var(--color);
+}
+
+.content{
+    background-color: var(--background);
+    color: var(--color);
+    transition: background-color 2s ease;
+}
+
+/* body {
+    background: green;
+    transition: background_ 1.5s;
+  
+    -webkit-transition: background_ 2s;
+    -moz-transition: background_ 2s;
+    -ms-transition: background_ 2s;
+    -o-transition: background_ 2s;
+    transition: background_ 2s; */
+/* } */
+  
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.exs{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/The_statue_of_St._Expeditus.jpg/344px-The_statue_of_St._Expeditus.jpg");
+    height: 20rem;
+    width: 15rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .text{
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 
 main{
-    margin: 1rem;
+    padding: 1rem;
+    -moz-box-shadow:    inset 0 0 .25rem hsla(0, 0%, 0%, 0.187);
+    -webkit-box-shadow: inset 0 0 .25rem hsla(0, 0%, 0%, 0.187);
+    box-shadow:         inset 0 0 .25rem hsla(0, 0%, 0%, 0.187);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+header nav{
+    padding: 1rem;
+}
+
+header nav svg{
+    height: 1rem;
+    fill: var(--color);
+}
+
+footer{
+    margin: 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+    -moz-box-shadow: .25rem 0 .25rem hsla(0, 0%, 0%, 0.187);
+    -webkit-box-shadow:  .25rem 0 .25rem hsla(0, 0%, 0%, 0.187);
+    box-shadow:         .25rem 0 .25rem hsla(0, 0%, 0%, 0.187);
+}
+
+#menu div{
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+#menu div svg{
+    height: 1.2rem;
+}
+
+#menu div:has(svg){
+    align-items: flex-end;
+}
+
+.hide{
+    display: none;
+}
+
+#toggle, #closeNav{
+    cursor: pointer;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    margin: .25rem 0;
+    list-style: none;
+}
+
+details{
+    margin: .5rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background : hsl(211, 28%, 17%);
+        --color: hsl(0, 0%, 100%);
+    }
+  }
+  
+@media (prefers-color-scheme: light) {
+    :root{
+        --background : hsl(0, 0%, 100%);
+        --color : hsl(0, 0%, 0%);
+    }
+}
+
+@media only screen and (min-width: 400px){
+    #menu{
+        width: fit-content;
+    }
 }
