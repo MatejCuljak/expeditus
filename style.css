@@ -9,7 +9,25 @@ body{
 .content{
     background-color: var(--background);
     color: var(--color);
-    transition: background-color 2s ease;
+    transition: background-color 1s ease;
+}
+
+#menu{
+    background-color: var(--background);
+    color: var(--color);
+    transition: background-color 1s ease;
+    -webkit-animation: slide .5s linear;
+    animation: slide .5s ease-in;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity: 10; }
+    100% { opacity: 100; }
+}
+
+@keyframes slide {
+    0% { opacity: 10; }
+    100% { opacity: 100; }
 }
 
 /* body {
@@ -126,6 +144,10 @@ ul li{
 
 details{
     margin: .5rem 0;
+}
+
+p{
+    line-height: 1.3rem;
 }
 
 @media (prefers-color-scheme: dark) {
