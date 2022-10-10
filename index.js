@@ -50,6 +50,7 @@ root.onscroll = ()=>{
 
     if(scrollTop < 150) {
 
+        document.body.style.setProperty("--background", "var(--colorB)");
         root.style.setProperty("--background", "var(--colorB)");
 
         return;
@@ -58,14 +59,18 @@ root.onscroll = ()=>{
     if(!checkDarkMode()){
         //LIGHT
         root.style.setProperty("--background", "hsl(0, 0%, 100%)");
+        document.body.style.setProperty("--background", "hsl(0, 0%, 100%)");
         root.style.setProperty("--color", "hsl(0, 0%, 0%)");
+        document.body.style.setProperty("--color", "hsl(0, 0%, 0%)");
 
         return;
 
     };
     
+    document.body.style.setProperty("--background", "hsl(211, 28%, 17%)");
     root.style.setProperty("--background", "hsl(211, 28%, 17%)");
     root.style.setProperty("--color", "hsl(0, 0%, 100%)");
+    document.body.style.setProperty("--color", "hsl(0, 0%, 100%)");
     return;
 
 };
