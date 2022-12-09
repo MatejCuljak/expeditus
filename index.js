@@ -84,4 +84,5 @@ function getOffset( el ) {
           el = el.offsetParent;
     }
     return { top: _y, left: _x };
-    }
+
+};
